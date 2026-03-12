@@ -102,3 +102,5 @@
 - 2026-03-12T20:08:48.408Z | bash-write | \n
 - 2026-03-12T20:13:32.738Z | bash-write | /dev/null
 - 2026-03-12T20:14:33.580Z | bash-write | /dev/null
+- 2026-03-12T20:21:19.115Z | bash-write | &1
+- 2026-03-12T20:22:56.354Z | bash-write | >
