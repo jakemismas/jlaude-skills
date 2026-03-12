@@ -14,6 +14,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | apex-patterns | Apex best practices, trigger handler pattern, governor limits, async patterns, test coverage standards |
 | lwc-patterns | LWC development patterns, anti-patterns, wire adapters, accessibility, ESLint config |
 | sf-integration | Salesforce integration patterns: REST, Named Credentials, External Services, Platform Events, CDC |
+| sf-test-data | Generating realistic test/proxy data in Salesforce using Anonymous Apex. Schema discovery, lookup resolution, fill rate variation, governor limits |
 | doc-strategy | Technical documentation and proposal writing strategy for Salesforce consulting |
 | sow-generator | SOW authoring for Salesforce consulting. PENDING Canidium template context |
 | canidium-discovery | Client discovery process, question frameworks, scope definition. PENDING Canidium frameworks |
