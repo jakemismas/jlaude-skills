@@ -1,17 +1,18 @@
 # Salesforce Org Context
 
-## Known Org Aliases
-- production: [Jake fills in alias] -- READ ONLY, never deploy
-- dev-sandbox: [Jake fills in alias] -- primary dev environment
-- client-sandbox: [Jake fills in alias] -- client UAT environment
+## Active Project
+- Client: [fill in per project]
+- Production alias: [fill in] -- READ ONLY, never deploy
+- Dev sandbox alias: [fill in] -- primary dev environment
+- UAT sandbox alias: [fill in, if applicable]
 
-## Known Conventions
-- Flow naming: [Jake fills in, e.g. "Append flow type to label: 'Set Account Active: Before Save'"]
-- API version: [Jake fills in, e.g. 62.0]
-- Custom object prefix: [Jake fills in if applicable]
+## Conventions (current project)
+- Flow naming: [e.g. "Set Account Active: Before Save"]
+- API version: [e.g. 62.0]
+- Custom object prefix: [if applicable]
 
 ## Common Field Names to Verify
-[Jake adds any fields Claude has hallucinated in past sessions]
+[Add any fields Claude has hallucinated in past sessions]
 
 ## Notes
-[Any other org-specific context]
+[Any other org-specific context for the current project]
