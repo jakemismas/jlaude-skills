@@ -40,7 +40,59 @@ Patterns for producing professional documentation in a Salesforce consulting con
 - Confident without being aggressive
 - Focus on value and outcomes, not features
 - Avoid hedging language ("we believe," "it seems," "perhaps")
-- Use active voice
+- Use active voice: "Creates agent" not "Agent is created"
+- Use imperatives for instructions: "Complete the configuration steps"
+- Do not use "please" in instructional content
+
+### Words to Avoid
+- Business jargon: "leverage," "utilize," "facilitate," "synergy," "paradigm"
+- Vague intensifiers: "revolutionary," "cutting-edge," "best-in-class"
+- Passive constructions: "It was determined that..." (say "We determined...")
+- Gerunds in headings: "Get started" not "Getting started," "Configure the system" not "Configuring the system"
+
+### Capitalization
+- Sentence case for titles and headings: "An introduction to data visualization" not "An Introduction to Data Visualization"
+- Capitalize only proper nouns (product names, Salesforce features, tools)
+- Do not capitalize: cloud, internet, machine learning, advanced analytics
+
+### Links and References
+- Make hyperlinks descriptive: "Learn how to configure Named Credentials"
+- Do not write: "To configure Named Credentials, see here"
+
+## Diataxis Content Framework
+
+When structuring documentation, categorize content into four types (adapted from the Diataxis framework, used by McKinsey):
+
+### 1. Tutorials (learning-oriented)
+- Hands-on lessons for newcomers
+- Linear, numbered steps with frequent visible results
+- Use "we" language
+- Do not explain why -- link to concepts instead
+
+### 2. How-to Guides (task-oriented)
+- Help competent users complete specific tasks
+- Goal-oriented: "If you want X, do Y"
+- Assume competence, do not teach
+
+### 3. Concepts (understanding-oriented)
+- Explain design decisions and reasoning
+- Answer "why" and "how does this work"
+- Discursive: "The reason for X is..."
+- No procedures or step-by-step instructions
+
+### 4. Reference (information-oriented)
+- Factual lookup material
+- Austere, factual, neutral tone
+- Structure mirrors the product
+- No instruction, explanation, or opinion
+
+### Decision guide
+- Reader is LEARNING and doing hands-on work: Tutorial
+- Reader is LEARNING and building understanding: Concepts
+- Reader is WORKING and completing a task: How-to Guide
+- Reader is WORKING and looking up details: Reference
+
+Do not mix types. A how-to guide should not teach; a tutorial should not reference every detail.
 
 ## Quality Checklist
 - [ ] Every claim has supporting evidence or reference
@@ -50,7 +102,12 @@ Patterns for producing professional documentation in a Salesforce consulting con
 - [ ] Version number and date on every document
 - [ ] All sections reviewed for consistency
 - [ ] No placeholder text remaining
+- [ ] No business jargon (leverage, utilize, facilitate)
+- [ ] Active voice throughout
+- [ ] Sentence case in all headings
 
 ## References
+- Diataxis Framework: https://diataxis.fr/
+- McKinsey ARK documentation skill (adapted writing guidelines)
 - General professional documentation standards
 - Consulting deliverable best practices

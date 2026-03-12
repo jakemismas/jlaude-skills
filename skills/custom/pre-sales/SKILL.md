@@ -50,6 +50,13 @@ When evaluating whether to pursue an opportunity:
 - Does the client have the organizational readiness?
 - Are there red flags (unrealistic expectations, decision-by-committee, no budget)?
 
+## Related Skills (load alongside this one)
+- **pm-company-research**: Use before discovery to build a client intelligence brief with executive quotes, product strategy, and org context
+- **pm-positioning-statement**: Use the Geoffrey Moore framework (For / that need / is a / that / Unlike / provides) to sharpen proposal positioning
+- **pm-press-release**: Use the Amazon Working Backwards format to define and test the solution vision before committing to scope
+- **pm-epic-hypothesis**: Use when framing project phases as testable hypotheses with validation criteria
+
 ## References
 - General Salesforce consulting pre-sales best practices
+- deanpeters/Product-Manager-Skills (company-research, positioning, press-release, epic-hypothesis frameworks)
 - Pending: Canidium voice, standard differentiators, and pricing philosophy from Claude.ai

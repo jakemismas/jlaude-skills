@@ -57,6 +57,12 @@ Flag when a requirement:
 - Affects a team or process not in the original stakeholder list
 - Would more than double the estimated effort of a phase
 
+## Related Skills (load alongside this one)
+- **pm-jobs-to-be-done**: Use the JTBD framework during Phase 3 (Pain Point Identification) to uncover functional, social, and emotional jobs
+- **pm-problem-statement**: Use the "I am / Trying to / But / Because / Which makes me feel" framework to frame discovered problems
+- **pm-customer-journey-map**: Use when mapping the client's end-to-end process across systems and teams
+
 ## References
 - General consulting discovery best practices
+- deanpeters/Product-Manager-Skills (JTBD, problem-statement, customer-journey-map frameworks)
 - Pending: Canidium-specific discovery frameworks and question sequences from Claude.ai
