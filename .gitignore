@@ -1,0 +1,21 @@
+# Session memory (local only, not tracked)
+memory/sessions/
+
+# Environment and secrets
+.env
+.env.*
+*.bak
+
+# Claude working directory (temp copies)
+.claude-working/
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

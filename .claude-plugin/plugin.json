@@ -1,0 +1,26 @@
+{
+  "name": "jlaude-skills",
+  "version": "1.0.0",
+  "description": "Full agent harness for Salesforce consulting and Canidium business workflows: skills, instincts, subagents, slash commands, hooks, and memory.",
+  "author": {
+    "name": "Jake Mismas",
+    "url": "https://github.com/jakemismas"
+  },
+  "homepage": "https://github.com/jakemismas/jlaude-skills",
+  "repository": "https://github.com/jakemismas/jlaude-skills",
+  "license": "MIT",
+  "keywords": [
+    "salesforce",
+    "consulting",
+    "canidium",
+    "flow-builder",
+    "apex",
+    "lwc",
+    "discovery",
+    "proposal",
+    "sow",
+    "deployment",
+    "org-audit"
+  ],
+  "hooks": "./hooks/hooks.json"
+}
