@@ -61,6 +61,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 ### Utility Commands
 | Command | Description |
 |---------|-------------|
+| /upskill | Review current session and update skill files with new patterns, gotchas, and techniques |
 | /instinct-learn | Review and promote learned instincts |
 | /sync-skills | Pull latest, re-symlink, re-register, security scan |
 | /org-audit | Audit a Salesforce org (read-only) |
