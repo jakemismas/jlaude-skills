@@ -20,6 +20,22 @@ Patterns for producing professional documentation in a Salesforce consulting con
 6. **Test Plan**: Testing strategy, cases, and expected outcomes
 7. **User Guide**: End-user documentation for delivered solution
 8. **Runbook**: Operational procedures for ongoing maintenance
+9. **System Documentation** (IT handoff): Reference document for client IT or infrastructure team covering what was built, not how to use it
+
+### System Documentation structure
+
+Use this eight-section structure when producing an IT handoff document. Audience: client IT team. Diataxis type: Reference (no procedures, no tutorials).
+
+1. **System overview** — Purpose, business context, scope in/out
+2. **Platform and org configuration** — Org URL, type, API version, toolchain, key contacts
+3. **Data model** — Custom objects (field tables), standard object extensions, object relationships
+4. **Automation and business logic** — Record-triggered flows, scheduled flows, triggers, validation rules
+5. **Integration architecture** — Inbound/outbound integration detail, processing sequences, audit objects
+6. **Security and access control** — Permission sets (object + field permissions + assigned users), sharing models, third-party package access
+7. **Component inventory** — Reference tables for all custom components: Apex classes, triggers, flows (with API names), objects, permission sets
+8. **Operational notes** — Known constraints, hardcoded dependencies, third-party packages, deployment process, source code location
+
+Writing note: No em dashes or dashes used as punctuation. Use commas or separate sentences instead.
 
 ## Writing Principles
 

@@ -174,6 +174,29 @@ const doc = new Document({
 // Different reference = restarts (1,2,3 then 1,2,3)
 ```
 
+#### Multiple independent numbered sequences in one document
+
+When a document has several separate numbered lists that should each start at 1 (e.g., one per section), define a unique reference name per sequence. All references can share the same DECIMAL format.
+
+```javascript
+numbering: {
+  config: [
+    { reference: "bullets",         levels: [{ level: 0, format: LevelFormat.BULLET,   text: "•",   ... }] },
+    { reference: "setup-steps",     levels: [{ level: 0, format: LevelFormat.DECIMAL,  text: "%1.", ... }] },
+    { reference: "migration-steps", levels: [{ level: 0, format: LevelFormat.DECIMAL,  text: "%1.", ... }] },
+    { reference: "deploy-steps",    levels: [{ level: 0, format: LevelFormat.DECIMAL,  text: "%1.", ... }] },
+  ]
+}
+
+// Each named sequence is independent: setup-steps runs 1,2,3 and migration-steps also starts at 1.
+// Paragraphs using the same reference within a section continue counting sequentially.
+new Paragraph({ numbering: { reference: "setup-steps",     level: 0 }, children: [new TextRun("Step A1")] })
+new Paragraph({ numbering: { reference: "setup-steps",     level: 0 }, children: [new TextRun("Step A2")] })
+// ...later in the document...
+new Paragraph({ numbering: { reference: "migration-steps", level: 0 }, children: [new TextRun("Step B1")] })
+new Paragraph({ numbering: { reference: "migration-steps", level: 0 }, children: [new TextRun("Step B2")] })
+```
+
 ### Tables
 
 **CRITICAL: Tables need dual widths** - set both `columnWidths` on the table AND `width` on each cell. Without both, tables render incorrectly on some platforms.
@@ -374,6 +397,54 @@ sections: [{
   },
   children: [/* content */]
 }]
+```
+
+### Script architecture for large documents
+
+For documents with many sections, organize the generation script in three layers. This keeps the script navigable, makes sections easy to reorder or isolate, and prevents deeply nested code.
+
+**Layer 1: Constants and helpers**
+Define page geometry, colors, and reusable element factories at the top of the file:
+```javascript
+const CONTENT_WIDTH = 9360; // US Letter, 1-inch margins
+
+function makeH1(text) { return new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text })] }); }
+function makeH2(text) { return new Paragraph({ heading: HeadingLevel.HEADING_2, children: [new TextRun({ text })] }); }
+function makeBody(text) { return new Paragraph({ children: [new TextRun({ text, size: 24 })], spacing: { after: 120 } }); }
+function makeBullet(text) { return new Paragraph({ numbering: { reference: "bullets", level: 0 }, children: [new TextRun({ text })] }); }
+
+// makeTable(headers, rows, colWidths) — see Tables section for full implementation
+```
+
+**Layer 2: Section builder functions**
+One function per document section. Each returns an array of docx elements (`Paragraph[]`, `Table[]`):
+```javascript
+function buildSection1_Overview() {
+  return [
+    makeH1("1. System overview"),
+    makeBody("..."),
+    makeBullet("Item one"),
+    pageBreak(),
+  ];
+}
+
+function buildSection2_Platform() { ... }
+```
+
+**Layer 3: Main assembly**
+Spread all sections into a flat `children` array:
+```javascript
+async function main() {
+  const children = [
+    ...buildTitlePage(),
+    ...buildSection1_Overview(),
+    ...buildSection2_Platform(),
+    // ...
+  ];
+  const doc = new Document({ sections: [{ properties: { page: { ... } }, children }] });
+  fs.writeFileSync(OUTPUT_PATH, await Packer.toBuffer(doc));
+}
+main().catch(console.error);
 ```
 
 ### Critical Rules for docx-js
