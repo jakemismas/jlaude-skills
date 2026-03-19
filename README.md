@@ -43,9 +43,6 @@ docs/          Documentation and guides
 | /sync-skills | Pull latest and re-register everything |
 | /session-review | Review recent session history |
 
-## Safety
-
-All destructive operations are blocked by the pre-tool-use hook. All commits are authored by Jake Mismas. All Salesforce deployments target sandboxes only. Jake deploys to production manually via changeset.
 
 ## Adding Content
 
