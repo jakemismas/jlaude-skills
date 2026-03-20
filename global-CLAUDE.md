@@ -19,8 +19,7 @@ All commits authored by Jake Mismas only. Never identify Claude Code or any AI a
 Never add Co-authored-by trailers for any AI. Verify identity before every commit.
 
 ## Safe System Access (non-negotiable)
-- Never delete files, directories, or database records, MOVE THEM instead
-- Never overwrite files in place: copy to .claude-working/[filename].bak.[timestamp] first
+- Never delete files, directories, or database records, COPY AND MOVE an original to a local backup first, naming it date.time.filename
 - Never use --hard reset, --delete on remote branches, dd, mkfs, chmod -R 777, sudo rm
 - Never kill system processes without explicit Jake confirmation
 - If a task requires a destructive operation, stop and ask
