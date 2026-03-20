@@ -16,6 +16,12 @@ else
   echo "No remote configured, skipping pull"
 fi
 
+# Sync global CLAUDE.md
+if [ -f "$SKILLS_DIR/global-CLAUDE.md" ]; then
+  echo "Syncing global-CLAUDE.md → $CLAUDE_DIR/CLAUDE.md"
+  cp "$SKILLS_DIR/global-CLAUDE.md" "$CLAUDE_DIR/CLAUDE.md"
+fi
+
 # Count before
 SKILLS_BEFORE=$(find "$SKILLS_DIR/skills" -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
 VENDOR_BEFORE=$(find "$SKILLS_DIR/skills/vendor" -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
