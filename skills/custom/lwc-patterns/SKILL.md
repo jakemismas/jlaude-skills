@@ -63,12 +63,51 @@ Always show loading spinners and error messages:
 - Name events in lowercase with no special characters
 - Always document event contracts
 
+## SVG Progress Visualization
+
+For progress rings, donut charts, or gauge visuals, use inline SVG with `stroke-dasharray` instead of CSS `conic-gradient`. SVG handles concentric multi-ring overflow cleanly:
+
+```html
+<svg class="progress-svg" viewBox="0 0 150 150">
+    <circle cx="75" cy="75" r="67" fill="none" stroke="#e5e5e5" stroke-width="12"></circle>
+    <circle cx="75" cy="75" r="67" fill="none" stroke="#0176d3" stroke-width="12"
+            stroke-dasharray={dasharray} stroke-linecap="round" class="ring-arc"></circle>
+    <circle cx="75" cy="75" r="56" fill="white"></circle>
+    <text x="75" y="75" text-anchor="middle" dominant-baseline="central">{percent}%</text>
+</svg>
+```
+
+Key techniques:
+- Rotate the SVG -90deg so arcs start at 12 o'clock: `transform: rotate(-90deg)`
+- Counter-rotate text inside so it reads normally: `transform: rotate(90deg)` with matching `transform-origin`
+- Calculate dasharray: `circumference * fillFraction` for the filled portion, remainder for the gap
+- For overflow rings (>100%), add concentric circles at larger radii with lighter color shades
+- Animate with CSS: `transition: stroke-dasharray 0.4s ease`
+
+## Role-Based Conditional Rendering
+
+When a component should only appear for certain users (e.g., Sales Users), have the Apex controller return `null` for non-qualifying users, then conditionally render the entire component:
+
+```javascript
+@wire(getMyData)
+wiredData({ data, error }) {
+    if (data) { this.isSalesUser = true; /* ... */ }
+    else if (data === null) { this.isSalesUser = false; }
+}
+```
+```html
+<template if:true={isSalesUser}><!-- entire component --></template>
+```
+
+This is cleaner than showing an empty card or a "not available" message.
+
 ## Anti-Patterns
 - Mutating @api properties (breaks one-way binding)
 - Direct DOM manipulation (use template directives instead)
 - Synchronous Apex in connectedCallback (use wire or imperative with await)
 - Inline styles (use CSS custom properties or component CSS)
 - Missing error handling on wire adapters or Apex calls
+- Using SLDS grid classes (`slds-grid`, `slds-col`) in narrow card contexts without overflow control — always add `overflow-x: hidden` on scrollable containers, `min-width: 0` on flex children, and `-webkit-line-clamp` for multi-line text truncation
 
 ## Accessibility
 - All interactive elements need accessible labels

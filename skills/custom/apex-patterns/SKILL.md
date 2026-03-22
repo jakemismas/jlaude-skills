@@ -80,6 +80,33 @@ public class AccountTriggerHandler {
 - Test with 200+ records to verify bulkification
 - Never use seeAllData=true except for specific platform limitations
 - Never hardcode record IDs in tests
+- When `SeeAllData=true` is unavoidable, use baseline-then-delta: query the current value before your test action, then assert the delta (e.g., `actual >= baseline + 1`) instead of asserting an absolute value
+
+### Mixed DML in Tests — System.runAs()
+
+Updating a User (setup object) and creating non-setup records (Task, Event, custom objects) in the same test transaction causes a `MIXED_DML_OPERATION` error. Fix: update the User outside `System.runAs()`, then wrap all non-setup DML inside it:
+
+```apex
+@isTest
+static void testSomething() {
+    // Setup object DML — OUTSIDE System.runAs
+    User testUser = [SELECT Id, Sales_User__c FROM User WHERE Id = :UserInfo.getUserId()];
+    if (!testUser.Sales_User__c) {
+        testUser.Sales_User__c = true;
+        update testUser;
+    }
+
+    // Non-setup DML — INSIDE System.runAs
+    System.runAs(testUser) {
+        insert new Task(Subject = 'Test', Status = 'Completed', OwnerId = testUser.Id);
+        // assertions...
+    }
+}
+```
+
+### Production Deploy Rollback Gotcha
+
+When deploying to production (`rollbackOnError=true` by default), a test failure rolls back ALL components — not just the test class. If you then fix and redeploy only the test class, it will fail again because the trigger/handler it depends on was rolled back and doesn't exist in the org. **Always redeploy all components together after a rollback.**
 
 ## Common Anti-Patterns
 - SOQL or DML inside loops
