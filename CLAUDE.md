@@ -19,6 +19,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | sow-generator | SOW authoring for Salesforce consulting. PENDING Canidium template context |
 | canidium-discovery | Client discovery process, question frameworks, scope definition. PENDING Canidium frameworks |
 | pre-sales | Solution architecture for pre-sales, discovery-to-proposal workflow. PENDING Canidium voice context |
+| prd-authoring | AI-optimized PRD writing for Claude Desktop → Claude Code workflow. Template, phasing, boundaries, acceptance criteria |
 
 ### Public Skills (skills/public/)
 (Empty: populate from anthropics/skills or Anthropic official releases)
