@@ -45,8 +45,14 @@ const DESTRUCTIVE_BASH = [
   { pattern: /\bchmod\s+(-R\s+)?777\b/, reason: "chmod 777 detected (broad permission change)", suggestion: "Use specific permissions instead of 777" },
 ];
 
+// Repos where direct push to main is allowed (personal skill repos, not shared codebases)
+const PUSH_TO_MAIN_ALLOWED_REPOS = [
+  "jlaude-skills",
+  "claude-skills",
+];
+
 const GIT_DANGEROUS = [
-  { pattern: /\bgit\s+push\s+.*\b(main|master)\b/, reason: "Direct push to main/master", suggestion: "Create a branch and open a PR instead" },
+  { pattern: /\bgit\s+push\s+.*\b(main|master)\b/, reason: "Direct push to main/master", suggestion: "Create a branch and open a PR instead", skipInAllowedRepos: true },
   { pattern: /\bgit\s+.*--force\b/, reason: "Git force flag detected", suggestion: "Avoid force operations. Use safe alternatives" },
   { pattern: /\bgit\s+.*\s+-f\b/, reason: "Git force shorthand detected", suggestion: "Avoid force operations. Use safe alternatives" },
   { pattern: /\bgit\s+reset\s+--hard\b/, reason: "git reset --hard detected", suggestion: "Use git stash or create a backup branch first" },
@@ -101,6 +107,12 @@ async function main() {
     // Check dangerous git commands
     for (const check of GIT_DANGEROUS) {
       if (check.pattern.test(cmdCheck)) {
+        // Allow push to main for whitelisted repos (personal skill repos)
+        if (check.skipInAllowedRepos) {
+          const cwd = process.cwd();
+          const inAllowedRepo = PUSH_TO_MAIN_ALLOWED_REPOS.some((repo) => cwd.includes(repo));
+          if (inAllowedRepo) continue;
+        }
         block(check.reason, check.suggestion);
         return;
       }
