@@ -7,65 +7,89 @@ description: Reviews the current conversation to extract patterns, techniques, a
 
 Review this session and improve skill files based on what was built, debugged, or discovered.
 
+## Quality gate: the 5-minute test
+
+Before capturing ANYTHING, apply this filter:
+
+> "Would having this written down save me 5+ minutes in a future session?"
+
+If the answer is not a clear yes, skip it. Most sessions produce 0-3 captures. A session with zero captures is normal and healthy -- it means the skills already covered what was needed.
+
 ## Workflow
 
-1. **Scan the conversation.** Review the full conversation history and identify:
-   - What was built (flows, Apex, LWC, data scripts, documents, configurations)
-   - What techniques or patterns were used
-   - What gotchas, corrections, or mistakes came up
-   - What workarounds were needed (CLI quirks, platform limits, deployment issues)
-   - Any decisions made and their reasoning
+1. **Scan the conversation.** Review the full conversation history. Look ONLY for:
+   - Corrections: something was done wrong and had to be fixed
+   - Workarounds: a platform limit, CLI quirk, or tooling issue required a non-obvious solution
+   - Gotchas: a reasonable approach failed for a surprising reason
+   - Techniques: a specific, concrete approach that worked and would not be the first thing someone tries
 
-2. **Match to existing skills.** For each finding, check if a relevant skill already exists:
-   - Read the CLAUDE.md index to find matching custom skills
-   - Search vendor skills if the topic is outside current custom skills
-   - If no skill exists and the pattern is reusable, flag it for a new skill
+   Do NOT capture:
+   - What was built (that belongs in the session summary, not skills)
+   - Decisions and their reasoning (that belongs in memory or commit messages)
+   - Anything that worked on the first try without surprises
 
-3. **Classify each finding.** For each pattern or technique, determine:
-   - **New pattern**: Not covered by any existing skill. Worth adding.
-   - **Refinement**: Existing skill covers the topic but is missing this specific technique, gotcha, or example.
-   - **Already covered**: Existing skill already documents this. Skip.
-   - **Too specific**: Only applies to this one project/client. Do not add to skills (note in session summary instead).
+   **If the scan produces zero candidates, stop here.** Report "No skill updates from this session" and exit. Do not force captures to justify running /upskill.
 
-4. **Draft updates.** For each "new pattern" or "refinement":
-   - Read the target SKILL.md file
-   - Draft the addition: a new section, additional bullet points, a gotcha entry, or an example
-   - Keep additions concise. Skills should be reference material, not narratives.
-   - Preserve the existing structure and tone of the skill file
+2. **Verify novelty.** For each candidate, grep the existing skill files:
+   ```
+   grep -r "<key phrase>" ~/claude-skills/skills/
+   ```
+   If the concept is already documented, skip it. If a related section exists but is missing this specific detail, it qualifies as a refinement.
 
-5. **Present changes to Jake.** Before writing anything, show:
-   - Which skill files will be updated
-   - What will be added to each (brief summary, not full text)
-   - Any new skills proposed (name + one-line description)
-   - Ask Jake to confirm, modify, or skip each change
+3. **Classify strictly.** Each candidate must be exactly one of:
+   - **Refinement**: An existing skill section is missing this specific gotcha, workaround, or technique. The addition is 1-5 lines.
+   - **New section**: The topic fits an existing skill but has no section for it. The addition is a headed section with 3-10 lines.
+   - **New skill**: No existing skill covers this domain AND you expect 3+ future sessions to benefit. Rare -- most sessions do not warrant a new skill.
+   - **Reject**: Fails the 5-minute test, is already covered, is too generic, is client-specific, or is something any experienced developer would already know. This should be the most common classification.
 
-6. **Apply approved changes.** For each approved update:
-   - Edit the skill file
-   - If creating a new custom skill, create the directory and SKILL.md with proper frontmatter
-   - Update CLAUDE.md index if a new skill was added
+4. **Present to Jake.** Before writing anything, show a numbered list:
+   ```
+   1. [REFINEMENT] apex-patterns: Mixed DML workaround using System.runAs -- 3 lines
+   2. [REJECT] General SOQL best practice -- already documented
+   3. [REJECT] Client field name mapping -- too specific
+   ```
+   Wait for Jake to confirm. He may reject items you proposed or ask for modifications.
 
-7. **Commit.** Stage and commit the skill updates with a message like:
+5. **Apply approved changes only.** For each approved item:
+   - Read the target SKILL.md
+   - Add the minimum necessary text. No preamble, no narrative, no "as we learned in this session"
+   - Preserve existing structure and tone
+   - If creating a new skill, create directory + SKILL.md with proper frontmatter and update CLAUDE.md index
+
+6. **Commit.** Stage and commit:
    ```
    /upskill: update [skill-names] from [project/task description]
    ```
 
-## What makes a good skill addition
+## Rejection criteria (hard rules)
 
-- **Reusable**: Would apply to future projects, not just this one
-- **Specific**: Concrete technique, command, gotcha, or pattern -- not vague advice
-- **Learned the hard way**: Corrections, workarounds, and "do this instead of that" are the most valuable
-- **Verified**: The pattern was actually used and worked in this session
+Skip the candidate if ANY of these apply:
+- It passed on the first try without any debugging or correction
+- You could find it in the first page of the official documentation
+- It only applies to one specific client, org, or project
+- The skill file already covers it (even in different words)
+- It is a general best practice (e.g., "bulkify your triggers", "write test classes")
+- It is advice rather than a concrete technique (e.g., "consider performance" vs. "use Database.Stateful to track cross-batch state")
+- The session did not actually verify it worked
+- It is self-referential (e.g., "we ran /upskill", "the flow-build command was used", "skills were synced")
+- It cannot be stated as a concrete, observable action -- if you cannot write it as "do X" or "do not do Y", it is not specific enough
 
-## What does NOT belong in skills
-
-- Client-specific data (org IDs, field names, record IDs)
-- One-off configurations
-- General knowledge that any developer would know
-- Patterns already well-documented in the skill
-
-## Examples of good upskill captures
+## Examples of good captures
 
 - "When deploying flows, do NOT pass --target-org to sf project deploy resume" (gotcha -> salesforce-flow)
-- "Anonymous Apex has a compilation size limit; split scripts by parent record" (pattern -> sf-test-data)
-- "Collection filters in screen flows all share one assignNextValueToReference variable" (convention -> salesforce-flow)
-- "Write SOQL to a temp file on Windows to avoid CLI quoting issues" (workaround -> sf-test-data)
+- "Anonymous Apex has a compilation size limit; split scripts by parent record" (workaround -> sf-test-data)
+- "On Windows, ln -sf silently fails in Git Bash; use cp -r with rm -rf cleanup instead" (workaround -> new candidate)
+- "Mixed DML: update User outside System.runAs, non-setup DML inside" (gotcha -> apex-patterns)
+
+## Examples of bad captures (reject these)
+
+- "We built a record-triggered flow for Opportunity" (what was built, not a technique)
+- "Always validate before deploying" (already in CLAUDE.md and sf-sandbox-first instinct)
+- "Use async Apex for long-running operations" (general knowledge, first page of docs)
+- "Client X uses a custom field called Revenue_Bucket__c" (client-specific)
+- "We ran /upskill and updated apex-patterns" (self-referential noise)
+- "Consider using Named Credentials for callouts" (advice, not a concrete technique)
+
+## Maintenance
+
+Skill files should not grow indefinitely. When running /upskill, also scan the target skill for entries that are now obsolete (platform behavior changed, CLI flag was removed, workaround is no longer needed). Flag these for removal. A skill with 50+ bullet points is a sign of accumulation without pruning.

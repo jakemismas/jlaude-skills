@@ -4,15 +4,24 @@
 Skill repo lives at ~/claude-skills/. Load the full index at session start.
 Read skill and agent descriptions before acting. Prefer skills and agents over improvising.
 
+## Skill Loading (non-negotiable)
+Before writing any code, generating any document, or building any configuration, scan the skill list for matching skills and load them via the Skill tool. If a custom skill exists for the domain (apex-patterns, salesforce-flow, lwc-patterns, sf-integration, doc-strategy, etc.), you MUST load it before acting. Do not rely on general knowledge when a skill file has domain-specific patterns and gotchas. Loading zero skills is acceptable only when the task has no matching skill in the index.
+
 ## Core Behavior
 - Research before building: run 3+ web searches before writing code from memory
 - When structure is ambiguous, search for current standards (AWS architecture, consulting best practices)
 - Use /clear between unrelated tasks
-- Compact proactively at 80% context
 - Delegate research and verification to subagents
 - Never embed credentials: use environment variables only
 - Flag uncertainty rather than guessing
 - Proactively write auto-memory notes when discovering: org field names, SF CLI patterns, client conventions, recurring error solutions
+
+## Compaction Protocol (non-negotiable)
+At ~80% context, BEFORE compacting:
+1. Spawn a subagent to do a lightweight upskill capture (corrections, workarounds, gotchas only -- see context-compact-discipline instinct for the exact prompt). The subagent writes candidates to ~/claude-skills/memory/instincts-learned.md. It does NOT modify skill files.
+2. Wait for the subagent to finish.
+3. Then compact.
+If the session was routine with no surprises, the subagent captures nothing and compaction proceeds immediately. The full /upskill (with user review and skill edits) is separate -- run it explicitly at end of session.
 
 ## Git Authorship (non-negotiable)
 All commits authored by Jake Mismas only. Never identify Claude Code or any AI as author or co-author.
