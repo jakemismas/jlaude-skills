@@ -75,9 +75,6 @@ find /tmp/test-sf -delete
 | /lwc-build | Build a Lightning Web Component |
 | /apex-build | Build Apex classes and tests |
 | /deploy | Validate metadata in sandbox |
-| /can-discover | Run a client discovery session |
-| /can-proposal | Draft a sales proposal |
-| /can-sow | Draft a Statement of Work |
 | /org-audit | Audit a Salesforce org |
 | /instinct-learn | Review and promote learned instincts |
 | /sync-skills | Pull latest and re-register everything |

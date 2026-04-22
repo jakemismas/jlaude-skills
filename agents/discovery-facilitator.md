@@ -45,4 +45,4 @@ You run structured discovery sessions and output clean requirements documents.
    - Recommended Next Steps
    - Scope Creep Flags
 
-6. **Suggest next steps.** Flag the discovery doc as input for /can-sow or /can-proposal.
+6. **Suggest next steps.** Flag the discovery doc as ready for handoff to the sow-drafter or proposal-writer agents.

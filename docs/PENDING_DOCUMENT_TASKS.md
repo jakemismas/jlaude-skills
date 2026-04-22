@@ -6,7 +6,7 @@ Follow-up Claude.ai sessions needed to flesh out Canidium-specific content. Each
 
 **What is needed:** The actual Canidium SOW structure, standard phases (e.g., Discovery, Design, Build, UAT, Deployment, Hypercare), assumption language, payment terms format, and change order language.
 
-**Unblocks:** `sow-generator` skill, `sow-drafter` agent, `/can-sow` command
+**Unblocks:** `sow-generator` skill, `sow-drafter` agent
 
 **Estimated effort:** 1 Claude.ai session (30-45 minutes)
 
@@ -19,7 +19,7 @@ Follow-up Claude.ai sessions needed to flesh out Canidium-specific content. Each
 
 **What is needed:** Canidium's writing voice, standard differentiators (what makes Canidium different from other Salesforce consultancies), pricing philosophy, and how Canidium positions itself in proposals.
 
-**Unblocks:** `proposal-writer` agent, `/can-proposal` command
+**Unblocks:** `proposal-writer` agent
 
 **Estimated effort:** 1 Claude.ai session (20-30 minutes)
 

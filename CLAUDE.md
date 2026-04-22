@@ -62,9 +62,6 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 ### Canidium Business Commands (can-)
 | Command | Description |
 |---------|-------------|
-| /can-discover | Run a structured client discovery session |
-| /can-proposal | Draft a sales proposal |
-| /can-sow | Draft a Statement of Work (pricing gate enforced) |
 | /can-frd | [STUB] Generate FRD. Pending Canidium template |
 | /can-design | [STUB] Generate Solution Design Doc. Pending Canidium template |
 
