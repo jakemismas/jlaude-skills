@@ -18,13 +18,53 @@ bash ~/claude-skills/docs/mcp-setup.sh
 ## Structure
 
 ```
-skills/        Skill definitions (public, custom, vendor)
-agents/        Specialized subagent definitions
-commands/      Slash command definitions
-instincts/     Always-on behavioral patterns
-hooks/         Lifecycle hooks (pre-tool-use, session start/stop, etc.)
-memory/        Persistent context (org info, session history, learned instincts)
-docs/          Documentation and guides
+skills/
+  salesforce/           Salesforce skills (sf-apex-patterns, sf-flow, sf-lwc-patterns, etc.)
+  general/              Non-Salesforce skills (brainstorming, deep-research, doc-strategy, etc.)
+agents/                 Specialized subagent definitions
+commands/               Slash command definitions
+instincts/              Always-on behavioral patterns
+hooks/                  Lifecycle hooks (pre-tool-use, session start/stop, etc.)
+memory/                 Persistent context (org info, session history, learned instincts)
+docs/                   Documentation and guides
+global-CLAUDE.md        Source of truth for ~/.claude/CLAUDE.md (synced by sync.sh)
+<practice>-CLAUDE.md    Practice-specific rules (e.g., salesforce-CLAUDE.md)
+```
+
+## Practices (auto-loaded per project)
+
+**For you, nothing to do.** Start Claude Code inside any SF client repo and the `SessionStart` hook scans the cwd for SF markers (`sfdx-project.json`, `force-app/`, `config/project-scratch-def.json`, `manifest/package.xml`), finds one, and injects `salesforce-CLAUDE.md` into Claude's context automatically. No `@`-import, no file to drop in, no template to copy.
+
+**Structure chosen:** flat files at the repo root (`salesforce-CLAUDE.md`, future `finance-CLAUDE.md`, etc.), not a `workspaces/` folder. Simpler. What matters is the auto-loading, not the folder layout.
+
+### Adding a new practice
+
+Two steps:
+
+1. **Drop `~/claude-skills/<practice>-CLAUDE.md`** with the rules. Structure it like `salesforce-CLAUDE.md`: practice-specific sections that apply in addition to the global config.
+2. **Add one entry to `PRACTICE_MARKERS`** in `hooks/session-start.js`:
+   ```js
+   { name: "python", markers: ["pyproject.toml", "requirements.txt"] }
+   ```
+
+That's it. Zero change to any client repo. Run `bash ~/claude-skills/sync.sh` to re-register the hook.
+
+### Behavior
+
+- Non-matching directory: `SessionStart` returns `{}` and no practice rules are injected.
+- Matching directory: the full `<practice>-CLAUDE.md` is injected as `additionalContext` and treated by Claude as binding for that session.
+- First match wins if a directory happens to match multiple practices (order is the order in `PRACTICE_MARKERS`).
+
+### Verifying
+
+```bash
+# From a non-practice dir: should print {}
+cd ~ && node ~/claude-skills/hooks/session-start.js < /dev/null 2>/dev/null
+
+# Simulate a Salesforce project: should print injected content
+mkdir -p /tmp/test-sf && touch /tmp/test-sf/sfdx-project.json
+cd /tmp/test-sf && node ~/claude-skills/hooks/session-start.js < /dev/null 2>/dev/null
+find /tmp/test-sf -delete
 ```
 
 ## Key Commands

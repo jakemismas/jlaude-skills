@@ -174,3 +174,6 @@
 - 2026-04-22T21:10:22.927Z | bash-write | /dev/null
 - 2026-04-22T21:11:11.784Z | bash-write | &1
 - 2026-04-22T21:11:52.504Z | write | C:\Users\JakeMismas\claude-skills\hooks\pre-tool-use.js
+- 2026-04-22T21:12:26.819Z | bash-write | -CLAUDE.md
+- 2026-04-22T21:12:40.839Z | bash-write | &1
+- 2026-04-22T21:13:48.988Z | write | C:\Users\JakeMismas\claude-skills\README.md
