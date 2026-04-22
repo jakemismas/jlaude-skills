@@ -1,0 +1,62 @@
+{
+  "_comment": "Keyword-to-skill mapping used by user-prompt-submit.js. When a user prompt contains any keyword (case-insensitive, word-boundary match), the hook injects a system reminder suggesting the mapped skill. Keep keywords specific to reduce false positives. Multi-word keywords must match as a contiguous phrase.",
+  "skills": {
+    "sf-apex-patterns": {
+      "keywords": ["apex", "trigger handler", "soql", "sobject", "governor limit", "batch apex", "queueable", "schedulable", "future method", "dml", "system.runas"]
+    },
+    "sf-flow": {
+      "keywords": ["flow", "screen flow", "record-triggered flow", "autolaunched flow", "flow builder", "flow element", "decision element", "loop element", "subflow", "fault path"]
+    },
+    "sf-lwc-patterns": {
+      "keywords": ["lwc", "lightning web component", "@wire", "@api", "@track", "lightningelement", "uiRecordApi", "apex method wire", "lightning-datatable"]
+    },
+    "sf-integration": {
+      "keywords": ["named credential", "external service", "platform event", "change data capture", "outbound message", "apex callout", "http callout", "salesforce integration", "mulesoft", "webhook"]
+    },
+    "sf-test-data": {
+      "keywords": ["test data", "proxy data", "anonymous apex", "seed data", "fake data", "testfactory", "data generation"]
+    },
+    "sf-test-class-generator": {
+      "keywords": ["test class", "unit test apex", "testmethod", "testsetup", "test coverage", "@istest"]
+    },
+    "sf-strategic-plan-architect": {
+      "keywords": ["strategic plan", "implementation plan", "phased rollout", "salesforce architecture", "affected objects"]
+    },
+    "sf-dev-docs": {
+      "keywords": ["dev docs", "task documentation", "plan-template", "context-template", "tasks-template"]
+    },
+    "sf-dev-docs-update": {
+      "keywords": ["update dev docs", "end session dev docs", "dev docs update"]
+    },
+    "sf-install": {
+      "keywords": ["install framework", "install sf framework", "install claude framework"]
+    },
+    "sf-setup": {
+      "keywords": ["setup framework", "configure sf framework", "skill-rules.json", "framework setup"]
+    },
+    "doc-strategy": {
+      "keywords": ["client document", "technical documentation", "proposal document", "deliverable document", "sow authoring"]
+    },
+    "sow-generator": {
+      "keywords": ["sow", "statement of work", "draft sow"]
+    },
+    "canidium-discovery": {
+      "keywords": ["discovery session", "client discovery", "requirements gathering", "stakeholder interview"]
+    },
+    "pre-sales": {
+      "keywords": ["pre-sales", "sales demo", "solution architecture", "rfp response", "proposal strategy"]
+    },
+    "prd-authoring": {
+      "keywords": ["prd", "product requirements document", "product spec"]
+    },
+    "brainstorming": {
+      "keywords": ["brainstorm", "let us ideate", "ideate", "design exploration", "feature exploration"]
+    },
+    "deep-research": {
+      "keywords": ["deep research", "comprehensive research", "market analysis", "competitive landscape", "due diligence"]
+    },
+    "plan-writing": {
+      "keywords": ["write a plan", "implementation plan", "task breakdown", "refactoring plan", "multi-step plan"]
+    }
+  }
+}

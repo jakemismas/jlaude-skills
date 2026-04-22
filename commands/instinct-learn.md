@@ -9,7 +9,7 @@ Review and promote learned instincts.
 
 ## Workflow
 
-1. **Read candidates.** Open memory/instincts-learned.md and find all entries tagged [CANDIDATE].
+1. **Read candidates.** Open memory/instincts-learned.md. Candidates are tagged `[CANDIDATE-HIGH]`, `[CANDIDATE-MED]`, or `[CANDIDATE-LOW]` by the session-stop hook. Surface HIGH first, then MED. Skip LOW on routine reviews unless volume is low.
 
 2. **Review session history.** Read the last 10 session summaries from memory/sessions/ and look for:
    - Recurring patterns (same type of fix applied multiple times)
