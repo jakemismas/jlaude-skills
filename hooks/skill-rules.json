@@ -60,6 +60,9 @@
     },
     "skill-authoring": {
       "keywords": ["create a skill", "create skill", "write a skill", "new skill", "add a skill", "author a skill", "turn this into a skill", "make a skill", "skill authoring", "improve a skill", "tune skill description", "skill triggering"]
+    },
+    "user-story-writing": {
+      "keywords": ["user story", "user stories", "backlog item", "jira ticket", "acceptance criteria", "story format", "write a story", "draft a story", "as a user i want", "split this story"]
     }
   }
 }

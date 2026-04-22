@@ -35,6 +35,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | deep-research | Structured deep-research methodology for complex topics |
 | plan-writing | Planning discipline for non-trivial implementation tasks |
 | skill-authoring | Writing new skills, tuning descriptions for reliable triggering, placing skills in the right folder, and integrating with the hook-based auto-loader |
+| user-story-writing | User story authoring for Canidium engagements. As-a / I-want / So-that format, behavioral acceptance criteria, sizing, and common failure modes |
 
 ## Agents Index
 
