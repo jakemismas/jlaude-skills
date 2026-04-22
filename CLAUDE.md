@@ -44,9 +44,6 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | sf-lwc-builder | Builds LWC bundles with best practices, checks existing patterns, flags Apex dependencies | Read, Write, Bash, Glob, Grep |
 | sf-apex-builder | Writes Apex classes, triggers, and test classes with 85%+ coverage | Read, Write, Bash, Glob, Grep |
 | sf-deploy-manager | Validates metadata against sandbox, prepares changeset manifest. Never deploys to prod | Bash, Read, Glob |
-| discovery-facilitator | Runs structured discovery sessions, captures requirements, flags scope creep | Read, Write |
-| proposal-writer | Drafts sales proposals from discovery notes or RFP | Read, Write |
-| sow-drafter | Drafts SOWs with pricing gate. Jake must confirm pricing before output | Read, Write |
 | org-auditor | Read-only Salesforce org audit for health, debt, and risk | Bash, Read, Glob |
 
 ## Commands Index
@@ -58,12 +55,6 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | /lwc-build | Build a Lightning Web Component |
 | /apex-build | Build Apex classes and tests |
 | /deploy | Validate metadata in sandbox, prepare changeset |
-
-### Canidium Business Commands (can-)
-| Command | Description |
-|---------|-------------|
-| /can-frd | [STUB] Generate FRD. Pending Canidium template |
-| /can-design | [STUB] Generate Solution Design Doc. Pending Canidium template |
 
 ### Utility Commands
 | Command | Description |

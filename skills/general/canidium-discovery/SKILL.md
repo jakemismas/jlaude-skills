@@ -48,7 +48,13 @@ Questions to ask:
 - Phase boundaries (what goes in phase 1 vs. later phases)
 
 ## Output Structure
-See the discovery-facilitator agent for the standard output format.
+Capture the discovery session in a structured document under
+`.claude-working/[ClientName]/discovery-[date].md` with these sections:
+Executive Summary, Business Objectives, Current State, Desired Future
+State, Key Requirements, Prioritization (MoSCoW), Open Questions,
+Recommended Next Steps, Scope Creep Flags. The exact frameworks and
+question sequences for Canidium discovery are PENDING (see
+docs/PENDING_DOCUMENT_TASKS.md task 2).
 
 ## Scope Creep Detection
 Flag when a requirement:

@@ -24,10 +24,10 @@ Manual checklist for uploading custom skills to Claude.ai projects. Claude.ai ha
 
 ### Agent Descriptions (trimmed for Claude.ai)
 - [ ] agents/sf-flow-builder.md (trim to instructions only, remove YAML frontmatter)
+- [ ] agents/sf-lwc-builder.md
+- [ ] agents/sf-apex-builder.md
 - [ ] agents/sf-deploy-manager.md
-- [ ] agents/discovery-facilitator.md
-- [ ] agents/proposal-writer.md
-- [ ] agents/sow-drafter.md
+- [ ] agents/org-auditor.md
 
 ## Skills That May Need Trimming
 
