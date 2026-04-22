@@ -1,4 +1,9 @@
 <!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
+---
+name: sf-install
+description: Installs the ehebert7 Salesforce Claude Framework (agents, commands, hooks, dev templates) into a target project directory. Load when the user asks to install or bootstrap the SF Claude Framework in a project.
+---
+
 # Install Framework
 
 Install the Salesforce Claude Code Framework into a project directory.
@@ -57,22 +62,20 @@ When updating an existing installation:
 
 Display:
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 FRAMEWORK INSTALLED
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Location: [target path]
 
 Installed:
-• .claude/agents/      (2 agents)
-• .claude/commands/    (4 commands)
-• .claude/hooks/       (3 hook files)
-• dev/templates/       (3 templates)
-• CLAUDE.md
+- .claude/agents/      (2 agents)
+- .claude/commands/    (4 commands)
+- .claude/hooks/       (3 hook files)
+- dev/templates/       (3 templates)
+- CLAUDE.md
 
 NEXT STEPS:
 1. Navigate to the project: cd [target path]
 2. Run /setup to configure skills and customize CLAUDE.md
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ## Examples

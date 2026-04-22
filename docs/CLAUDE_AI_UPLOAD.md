@@ -18,10 +18,10 @@ Manual checklist for uploading custom skills to Claude.ai projects. Claude.ai ha
 - [ ] skills/salesforce/sf-integration/SKILL.md
 
 ### Medium Priority
-- [ ] skills/doc-strategy/SKILL.md
-- [ ] skills/sow-generator/SKILL.md
-- [ ] skills/canidium-discovery/SKILL.md
-- [ ] skills/pre-sales/SKILL.md
+- [ ] skills/general/doc-strategy/SKILL.md
+- [ ] skills/general/sow-generator/SKILL.md
+- [ ] skills/general/canidium-discovery/SKILL.md
+- [ ] skills/general/pre-sales/SKILL.md
 
 ### Agent Descriptions (trimmed for Claude.ai)
 - [ ] agents/sf-flow-builder.md (trim to instructions only, remove YAML frontmatter)

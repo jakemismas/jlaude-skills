@@ -15,15 +15,14 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | sf-lwc-patterns | LWC development patterns, anti-patterns, wire adapters, accessibility, ESLint config |
 | sf-integration | Salesforce integration patterns: REST, Named Credentials, External Services, Platform Events, CDC |
 | sf-test-data | Generating realistic test/proxy data in Salesforce using Anonymous Apex. Schema discovery, lookup resolution, fill rate variation, governor limits |
-| sf-claude-framework | Community Claude framework for Salesforce dev workflows |
-| sf-dev-docs | Salesforce developer reference documentation |
-| sf-dev-docs-update | Update routines for Salesforce developer reference documentation |
-| sf-install | Salesforce environment install guidance |
-| sf-setup | Salesforce environment setup guidance |
-| sf-strategic-plan-architect | Strategic planning for Salesforce architecture work |
-| sf-test-class-generator | Patterns for generating Apex test classes |
+| sf-dev-docs | Creates plan/context/tasks dev docs for an active Salesforce development task |
+| sf-dev-docs-update | Updates the active Salesforce dev docs before compacting or ending a session |
+| sf-install | Installs the ehebert7 Salesforce Claude Framework into a target project |
+| sf-setup | Configures skills, triggers, and CLAUDE.md for the SF Claude Framework |
+| sf-strategic-plan-architect | Creates phased implementation plans for large Salesforce features |
+| sf-test-class-generator | Generates comprehensive Apex test classes with 85%+ coverage patterns |
 
-### General Skills (skills/)
+### General Skills (skills/general/)
 
 | Skill | Description |
 |-------|-------------|

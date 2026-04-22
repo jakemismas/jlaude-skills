@@ -35,7 +35,7 @@ function allow() {
 
 // Destructive command patterns
 const DESTRUCTIVE_BASH = [
-  { pattern: /\brm\s+(-[^\s]*\s+)*/, reason: "rm command detected", suggestion: "Move files to .claude-working/ instead of deleting" },
+  { pattern: /(?<!git\s)\brm\s+(-[^\s]*\s+)*/, reason: "rm command detected", suggestion: "Move files to .claude-working/ instead of deleting" },
   { pattern: /\brmdir\b/, reason: "rmdir command detected", suggestion: "Move directories to .claude-working/ instead of deleting" },
   { pattern: /\bunlink\b/, reason: "unlink command detected", suggestion: "Move files to .claude-working/ instead of deleting" },
   { pattern: /\bsudo\s+rm\b/, reason: "sudo rm detected", suggestion: "Never use sudo rm. Ask Jake for confirmation first" },

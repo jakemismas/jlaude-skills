@@ -1,4 +1,9 @@
 <!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
+---
+name: sf-setup
+description: Configures the ehebert7 Salesforce Claude Framework (skill rules, CLAUDE.md, detection triggers) in an installed project. Load when the user asks to set up or configure the SF Claude Framework after install.
+---
+
 # Framework Setup
 
 Configure the Salesforce Claude Code Framework for your environment.
@@ -27,9 +32,8 @@ And stop.
 
 Display:
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SKILL CONFIGURATION
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 Skills are markdown files containing domain knowledge that Claude
 can reference when helping you code.
 
@@ -58,10 +62,10 @@ Scan the directory for `.md` files recursively. For each file:
 Display found skills:
 ```
 Found X skills:
-• apex-best-practices
-• lwc-dev-guidelines
-• agentforce-setup
-• salesforce-flow-architect
+- apex-best-practices
+- lwc-dev-guidelines
+- agentforce-setup
+- salesforce-flow-architect
 [...]
 
 Would you like to configure auto-detection triggers for these skills?
@@ -72,9 +76,9 @@ Would you like to configure auto-detection triggers for these skills?
 
 **If "smart defaults":**
 Generate triggers based on skill name:
-- `apex-best-practices` → keywords: ["apex", "trigger", "class", "soql", "dml"]
-- `lwc-dev-guidelines` → keywords: ["lwc", "lightning", "component", "wire"]
-- `agentforce-*` → keywords: ["agentforce", "agent", "bot", "topic", "action"]
+- `apex-best-practices` -> keywords: ["apex", "trigger", "class", "soql", "dml"]
+- `lwc-dev-guidelines` -> keywords: ["lwc", "lightning", "component", "wire"]
+- `agentforce-*` -> keywords: ["agentforce", "agent", "bot", "topic", "action"]
 - etc.
 
 **If "configure each":**
@@ -119,15 +123,14 @@ You can configure skills later by:
 Display:
 ```
 HOW SKILLS WORK
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 WHAT ARE SKILLS?
 Skills are markdown files containing best practices, patterns,
 and examples for specific domains (Apex, LWC, Flows, etc.).
 
 WHERE TO PUT SKILLS:
-• Global: ~/.claude/skills/ (available in all projects)
-• Project: .claude/skills/ (project-specific)
+- Global: ~/.claude/skills/ (available in all projects)
+- Project: .claude/skills/ (project-specific)
 
 CREATING A SKILL:
 Create a file like: apex-best-practices.md
@@ -156,7 +159,6 @@ Example entry in skill-rules.json:
     }
   }
 }
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 Then return to Step 2 menu.
@@ -183,27 +185,24 @@ Update CLAUDE.md with responses.
 
 Display:
 ```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 SETUP COMPLETE
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 SKILLS CONFIGURED: [X skills]
-• [skill-1]
-• [skill-2]
+- [skill-1]
+- [skill-2]
 [...]
 
 CLAUDE.MD: [Customized / Default]
 
 AVAILABLE COMMANDS:
-• /install     - Install framework to another project
-• /setup       - Run this setup again
-• /dev-docs    - Create task documentation
-• /dev-docs-update - Save progress before ending session
+- /install     - Install framework to another project
+- /setup       - Run this setup again
+- /dev-docs    - Create task documentation
+- /dev-docs-update - Save progress before ending session
 
 AVAILABLE AGENTS:
-• strategic-plan-architect - Plan large features
-• test-class-generator     - Generate test classes
+- strategic-plan-architect - Plan large features
+- test-class-generator     - Generate test classes
 
-You're ready to go! Try asking Claude to help with a Salesforce task.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+You are ready to go.
 ```

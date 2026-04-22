@@ -1,4 +1,11 @@
 <!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
+---
+name: sf-dev-docs-update
+description: Updates the active Salesforce dev docs (context, tasks) before compacting or ending a session. Load when closing out work on an in-progress feature or prepping context for handoff.
+---
+
+# Salesforce Dev Docs Update
+
 Update dev docs before compacting or ending session:
 
 1. Find active task in `dev/active/`
