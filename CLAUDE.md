@@ -34,6 +34,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | brainstorming | Transforms vague ideas into validated designs through disciplined reasoning. Use before creative or constructive work |
 | deep-research | Structured deep-research methodology for complex topics |
 | plan-writing | Planning discipline for non-trivial implementation tasks |
+| skill-authoring | Writing new skills, tuning descriptions for reliable triggering, placing skills in the right folder, and integrating with the hook-based auto-loader |
 
 ## Agents Index
 

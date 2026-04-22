@@ -57,6 +57,9 @@
     },
     "plan-writing": {
       "keywords": ["write a plan", "implementation plan", "task breakdown", "refactoring plan", "multi-step plan"]
+    },
+    "skill-authoring": {
+      "keywords": ["create a skill", "create skill", "write a skill", "new skill", "add a skill", "author a skill", "turn this into a skill", "make a skill", "skill authoring", "improve a skill", "tune skill description", "skill triggering"]
     }
   }
 }
