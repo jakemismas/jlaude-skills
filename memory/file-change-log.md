@@ -1,54 +1,5 @@
 # File Change Log
 
-- 2026-04-22T06:09:17.757Z | bash-write | &1
-- 2026-04-22T06:09:31.489Z | bash-write | &1
-
-- 2026-04-22T06:09:41.617Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:09:55.391Z | bash-write | &1
-- 2026-04-22T06:09:59.652Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:10:13.389Z | bash-write | &1
-- 2026-04-22T06:10:27.452Z | bash-write | &1
-- 2026-04-22T06:10:42.740Z | bash-write | &1
-- 2026-04-22T06:11:00.922Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:11:17.764Z | bash-write | &1
-- 2026-04-22T06:11:23.006Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:11:41.388Z | bash-write | &1
-- 2026-04-22T06:11:46.887Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:11:51.425Z | bash-write | &1
-- 2026-04-22T06:12:03.613Z | bash-write | &1
-- 2026-04-22T06:12:05.608Z | bash-write | &1
-- 2026-04-22T06:12:08.128Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:12:24.909Z | bash-write | &1
-- 2026-04-22T06:12:29.442Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:12:44.832Z | bash-write | &1
-- 2026-04-22T06:13:00.179Z | bash-write | &1
-- 2026-04-22T06:13:14.834Z | bash-write | &1
-- 2026-04-22T06:13:37.239Z | bash-write | &1
-- 2026-04-22T06:13:46.982Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatch.cls
-- 2026-04-22T06:13:55.030Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatch.cls
-- 2026-04-22T06:14:01.881Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\flows\Parent_Opportunity_set_Sales_Order.flow-meta.xml
-- 2026-04-22T06:14:05.011Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:14:21.115Z | bash-write | &1
-- 2026-04-22T06:14:27.013Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:14:41.246Z | bash-write | &1
-- 2026-04-22T06:14:51.632Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatchTest.cls
-- 2026-04-22T06:15:02.070Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatchTest.cls
-- 2026-04-22T06:15:07.118Z | bash-write | &1
-- 2026-04-22T06:15:29.100Z | bash-write | /dev/null
-- 2026-04-22T06:15:31.985Z | bash-write | &1
-- 2026-04-22T06:16:22.942Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatchTest.cls
-- 2026-04-22T06:16:47.138Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatchTest.cls
-- 2026-04-22T06:16:57.112Z | bash-write | &1
-- 2026-04-22T06:17:21.392Z | bash-write | /tmp/fielddef.txt
-- 2026-04-22T06:17:51.116Z | bash-write | /tmp/defq.txt
-- 2026-04-22T06:18:10.117Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:18:10.456Z | bash-write | /tmp/anon_check.apex
-- 2026-04-22T06:18:34.126Z | bash-write | &1
-- 2026-04-22T06:18:36.181Z | bash-write | /tmp/anon_check.apex
-- 2026-04-22T06:18:52.500Z | bash-write | &1
-- 2026-04-22T06:19:12.025Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\.claude-working\query.soql
-- 2026-04-22T06:19:15.492Z | write | c:\Users\JakeMismas\onefluential--partial\onefluential--partial\force-app\main\default\classes\NetSuiteIntegrationBatchTest.cls
-- 2026-04-22T06:19:27.372Z | bash-write | &1
 - 2026-04-22T06:19:45.246Z | bash-write | &1
 - 2026-04-22T06:20:55.902Z | bash-write | /tmp/fdq.txt
 
@@ -198,3 +149,19 @@
 - 2026-04-22T21:57:25.639Z | write | C:\Users\JakeMismas\claude-skills\skills\general\user-story-writing\SKILL.md
 - 2026-04-22T21:57:32.984Z | write | C:\Users\JakeMismas\claude-skills\hooks\skill-rules.json
 - 2026-04-22T21:57:38.853Z | write | C:\Users\JakeMismas\claude-skills\CLAUDE.md
+
+- 2026-04-22T21:58:39.086Z | bash-write | %n%n%s%n%n%b
+- 2026-04-22T21:58:51.472Z | bash-write | &1
+- 2026-04-22T21:59:13.801Z | bash-write | &1
+- 2026-04-22T22:00:28.035Z | bash-write | /dev/null
+- 2026-04-22T22:00:58.688Z | bash-write | &1
+- 2026-04-22T22:02:48.096Z | bash-write | &1
+- 2026-04-22T22:03:12.319Z | bash-write | &1
+- 2026-04-22T22:03:23.554Z | write | C:\Users\JakeMismas\claude-skills\CLAUDE.md
+- 2026-04-22T22:03:32.285Z | write | C:\Users\JakeMismas\claude-skills\hooks\skill-rules.json
+- 2026-04-22T22:03:41.275Z | write | C:\Users\JakeMismas\claude-skills\commands\can-proposal.md
+- 2026-04-22T22:03:50.188Z | write | C:\Users\JakeMismas\claude-skills\docs\CLAUDE_AI_UPLOAD.md
+- 2026-04-22T22:04:04.929Z | write | C:\Users\JakeMismas\claude-skills\docs\PENDING_DOCUMENT_TASKS.md
+- 2026-04-22T22:04:17.722Z | write | C:\Users\JakeMismas\claude-skills\skills\general\prd-authoring\SKILL.md
+- 2026-04-22T22:05:35.920Z | bash-write | &1
+- 2026-04-22T22:05:46.218Z | write | C:\Users\JakeMismas\claude-skills\docs\PENDING_DOCUMENT_TASKS.md

@@ -19,7 +19,7 @@ Follow-up Claude.ai sessions needed to flesh out Canidium-specific content. Each
 
 **What is needed:** Canidium's writing voice, standard differentiators (what makes Canidium different from other Salesforce consultancies), pricing philosophy, and how Canidium positions itself in proposals.
 
-**Unblocks:** `proposal-writer` agent, `/can-proposal` command, `pre-sales` skill
+**Unblocks:** `proposal-writer` agent, `/can-proposal` command
 
 **Estimated effort:** 1 Claude.ai session (20-30 minutes)
 
@@ -67,13 +67,3 @@ Follow-up Claude.ai sessions needed to flesh out Canidium-specific content. Each
 
 ---
 
-## 6. Pre-Sales Approach
-
-**What is needed:** Canidium's demo strategy, discovery-to-proposal workflow specifics, how solutions are positioned, and standard sizing/estimation approach.
-
-**Unblocks:** `pre-sales` skill
-
-**Estimated effort:** 1 Claude.ai session (15-20 minutes)
-
-**Consultation prompt:**
-> I am building a pre-sales support system for Canidium's Salesforce consulting practice. I need: (1) how Canidium structures demos (sandbox prep, narrative, key pain points), (2) the typical workflow from discovery to proposal delivery, (3) how solutions are sized and estimated, (4) standard team compositions for different project sizes, (5) how Canidium handles competitive positioning. Provide practical guidance I can encode into an automated workflow.

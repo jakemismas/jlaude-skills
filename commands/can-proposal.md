@@ -17,7 +17,7 @@ Draft a Canidium sales proposal.
    - Input document(s) to use (discovery notes, RFP, transcript)
    - Whether pricing has been discussed
 
-3. Load the `doc-strategy` and `pre-sales` skills before handing off to the agent.
+3. Load the `doc-strategy` skill before handing off to the agent.
 
 ## Execution
 

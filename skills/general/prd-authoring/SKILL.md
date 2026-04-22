@@ -276,15 +276,20 @@ Depending on the product, Claude Code should load relevant skills:
 
 | Product Type | Skills to Load |
 |-------------|---------------|
-| Salesforce app | `sf-apex-patterns`, `sf-lwc-patterns`, `sf-integration`, `sf-flow` |
-| Web app (React) | `frontend-patterns`, `backend-patterns`, `e2e-testing` |
-| API service | `api-design`, `backend-patterns`, `database-design` |
-| Any product | `coding-standards`, `security-review`, `tdd-workflow` |
+| Salesforce Apex | `sf-apex-patterns`, `sf-test-class-generator` |
+| Salesforce LWC | `sf-lwc-patterns` |
+| Salesforce Flow | `sf-flow` |
+| Salesforce integrations | `sf-integration` |
+| Test data generation | `sf-test-data` |
+| Multi-feature SF planning | `sf-strategic-plan-architect` |
+
+Non-Salesforce product types are not currently supported by skills in this
+repo. Add a skill via the `skill-authoring` workflow if you start a
+non-SF build frequently enough to warrant one.
 
 ### Commands to Invoke
 - `/apex-build`, `/lwc-build`, `/flow-build` — for Salesforce components
 - `/deploy` — to validate in sandbox
-- `/simplify` — after each phase to check code quality
 
 ---
 

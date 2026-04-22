@@ -29,7 +29,6 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | doc-strategy | Technical documentation and proposal writing strategy for Salesforce consulting |
 | sow-generator | SOW authoring for Salesforce consulting. PENDING Canidium template context |
 | canidium-discovery | Client discovery process, question frameworks, scope definition. PENDING Canidium frameworks |
-| pre-sales | Solution architecture for pre-sales, discovery-to-proposal workflow. PENDING Canidium voice context |
 | prd-authoring | AI-optimized PRD writing for Claude Desktop → Claude Code workflow. Template, phasing, boundaries, acceptance criteria |
 | brainstorming | Transforms vague ideas into validated designs through disciplined reasoning. Use before creative or constructive work |
 | deep-research | Structured deep-research methodology for complex topics |

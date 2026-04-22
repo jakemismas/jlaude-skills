@@ -43,9 +43,6 @@
     "canidium-discovery": {
       "keywords": ["discovery session", "client discovery", "requirements gathering", "stakeholder interview"]
     },
-    "pre-sales": {
-      "keywords": ["pre-sales", "sales demo", "solution architecture", "rfp response", "proposal strategy"]
-    },
     "prd-authoring": {
       "keywords": ["prd", "product requirements document", "product spec"]
     },
