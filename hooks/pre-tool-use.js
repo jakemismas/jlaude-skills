@@ -107,10 +107,14 @@ async function main() {
     // Check dangerous git commands
     for (const check of GIT_DANGEROUS) {
       if (check.pattern.test(cmdCheck)) {
-        // Allow push to main for whitelisted repos (personal skill repos)
+        // Allow push to main for whitelisted repos (personal skill repos).
+        // Check both the hook's cwd AND the raw bash command text, since a
+        // `cd ~/<repo> && git push ...` command does not change the hook's cwd.
         if (check.skipInAllowedRepos) {
           const cwd = process.cwd();
-          const inAllowedRepo = PUSH_TO_MAIN_ALLOWED_REPOS.some((repo) => cwd.includes(repo));
+          const inAllowedRepo = PUSH_TO_MAIN_ALLOWED_REPOS.some(
+            (repo) => cwd.includes(repo) || cmd.includes(repo)
+          );
           if (inAllowedRepo) continue;
         }
         block(check.reason, check.suggestion);

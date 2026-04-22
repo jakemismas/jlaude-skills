@@ -1,6 +1,12 @@
 # Salesforce Project Rules
 
-Import into any Salesforce client repo CLAUDE.md via:
+Auto-loaded by the SessionStart hook whenever the working directory
+contains Salesforce project markers (sfdx-project.json, force-app/,
+config/project-scratch-def.json, manifest/package.xml). No manual
+@-import needed in client repos.
+
+If you want to apply these rules somewhere the hook does not detect,
+import explicitly in that repo's CLAUDE.md:
 ```
 @~/claude-skills/salesforce-CLAUDE.md
 ```

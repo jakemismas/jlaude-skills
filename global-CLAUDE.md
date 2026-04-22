@@ -79,4 +79,11 @@ and skill edits) is separate -- run it explicitly at end of session.
   paths. /dev/null not NUL. Quote paths with spaces.
 - Primary working directory is C:\Users\JakeMismas.
 
+## Practice Rules (auto-loaded)
+The SessionStart hook detects the current project's practice type from
+working-directory markers and automatically injects the matching
+`<practice>-CLAUDE.md` into context. When a practice section appears in
+the session reminder, treat those rules as binding alongside this file.
+Current practices: salesforce (sfdx-project.json, force-app/, etc.).
+
 @~/claude-skills/CLAUDE.md
