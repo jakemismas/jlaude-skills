@@ -1,7 +1,7 @@
-<!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
 ---
 name: sf-install
 description: Installs the ehebert7 Salesforce Claude Framework (agents, commands, hooks, dev templates) into a target project directory. Load when the user asks to install or bootstrap the SF Claude Framework in a project.
+source: https://github.com/ehebert7/salesforce-claude-framework
 ---
 
 # Install Framework

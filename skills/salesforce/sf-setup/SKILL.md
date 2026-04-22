@@ -1,7 +1,7 @@
-<!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
 ---
 name: sf-setup
 description: Configures the ehebert7 Salesforce Claude Framework (skill rules, CLAUDE.md, detection triggers) in an installed project. Load when the user asks to set up or configure the SF Claude Framework after install.
+source: https://github.com/ehebert7/salesforce-claude-framework
 ---
 
 # Framework Setup

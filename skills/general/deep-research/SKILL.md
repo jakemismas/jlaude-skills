@@ -1,4 +1,3 @@
-<!-- source: https://github.com/sickn33/antigravity-awesome-skills -->
 ---
 name: deep-research
 description: "Execute autonomous multi-step research using Google Gemini Deep Research Agent. Use for: market analysis, competitive landscaping, literature reviews, technical research, due diligence. Takes 2-10 ..."

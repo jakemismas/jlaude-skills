@@ -31,9 +31,9 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | canidium-discovery | Client discovery process, question frameworks, scope definition. PENDING Canidium frameworks |
 | pre-sales | Solution architecture for pre-sales, discovery-to-proposal workflow. PENDING Canidium voice context |
 | prd-authoring | AI-optimized PRD writing for Claude Desktop → Claude Code workflow. Template, phasing, boundaries, acceptance criteria |
-| ag-brainstorming | Transforms vague ideas into validated designs through disciplined reasoning. Use before creative or constructive work |
-| ag-deep-research | Structured deep-research methodology for complex topics |
-| ag-plan-writing | Planning discipline for non-trivial implementation tasks |
+| brainstorming | Transforms vague ideas into validated designs through disciplined reasoning. Use before creative or constructive work |
+| deep-research | Structured deep-research methodology for complex topics |
+| plan-writing | Planning discipline for non-trivial implementation tasks |
 
 ## Agents Index
 

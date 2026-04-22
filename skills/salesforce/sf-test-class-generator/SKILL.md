@@ -1,7 +1,7 @@
-<!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
 ---
 name: sf-test-class-generator
 description: Generates comprehensive Apex test classes covering positive, negative, and bulk scenarios with 85%+ coverage and System.assert in every test method. Load when creating test coverage for Apex classes or triggers.
+source: https://github.com/ehebert7/salesforce-claude-framework
 ---
 
 # Test Class Generator

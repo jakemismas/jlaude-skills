@@ -1,7 +1,7 @@
-<!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
 ---
 name: sf-dev-docs
 description: Creates comprehensive dev docs (plan, context, tasks) for an active Salesforce development task. Load when starting a significant feature or when the user asks to document a task in progress.
+source: https://github.com/ehebert7/salesforce-claude-framework
 ---
 
 # Salesforce Dev Docs

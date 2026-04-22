@@ -1,7 +1,7 @@
-<!-- source: https://github.com/ehebert7/salesforce-claude-framework -->
 ---
 name: sf-strategic-plan-architect
 description: Creates phased implementation plans for large Salesforce features, identifying affected objects, fields, components, risks, and dev-doc deliverables. Load before starting significant Salesforce development work.
+source: https://github.com/ehebert7/salesforce-claude-framework
 ---
 
 # Strategic Plan Architect

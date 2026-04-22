@@ -1,3 +1,8 @@
+<!--
+SOURCE OF TRUTH: ~/claude-skills/global-CLAUDE.md
+sync.sh copies this file to ~/.claude/CLAUDE.md. Edit the source only.
+-->
+
 # Global Claude Code Configuration
 
 ## Orientation

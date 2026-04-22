@@ -29,6 +29,12 @@ SKILLS_BEFORE=$(find "$SKILLS_DIR/skills" -name "SKILL.md" 2>/dev/null | wc -l |
 # Re-create target directories
 mkdir -p "$CLAUDE_DIR/skills" "$CLAUDE_DIR/agents" "$CLAUDE_DIR/commands"
 
+# Prune stale entries so removed/renamed skills do not linger in ~/.claude.
+# Only wipes inside the managed subdirs; never touches anything outside.
+rm -rf "$CLAUDE_DIR/skills"/* 2>/dev/null || true
+rm -rf "$CLAUDE_DIR/agents"/* 2>/dev/null || true
+rm -rf "$CLAUDE_DIR/commands"/* 2>/dev/null || true
+
 # Detect OS: on Windows (MSYS/Git Bash/Cygwin), symlinks silently misbehave
 IS_WINDOWS=false
 case "$(uname -s)" in

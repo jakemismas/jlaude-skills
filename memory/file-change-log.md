@@ -1,54 +1,5 @@
 # File Change Log
 
-- 2026-04-21T21:23:30.573Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\scripts\test_issue2_amendment_step1.apex
-- 2026-04-21T21:23:45.706Z | bash-write | &1
-
-- 2026-04-21T21:24:12.528Z | bash-write | &1
-- 2026-04-21T21:24:20.443Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\scripts\test_issue2_optout_step.apex
-- 2026-04-21T21:24:35.228Z | bash-write | &1
-- 2026-04-21T21:25:01.909Z | bash-write | &1
-- 2026-04-21T21:25:07.481Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\scripts\test_issue2_cleanup.apex
-- 2026-04-21T21:25:22.695Z | bash-write | &1
-- 2026-04-21T21:25:54.056Z | write | c:\Users\JakeMismas\influential--metropolis.sandbox\influential--metropolis.sandbox\Prod_Deploy_Notes_Issue2.md
-- 2026-04-22T05:48:55.350Z | write | c:\Users\JakeMismas\Onefluential Production Org\onefluential-production\PLAN-parent-opp-netsuite-so-fix.md
-- 2026-04-22T06:00:15.057Z | bash-write | /dev/null
-- 2026-04-22T06:00:41.866Z | bash-write | /dev/null
-- 2026-04-22T06:00:53.848Z | bash-write | /dev/null
-- 2026-04-22T06:01:18.963Z | bash-write | &1
-- 2026-04-22T06:02:21.251Z | bash-write | &1
-- 2026-04-22T06:02:21.936Z | bash-write | &1
-- 2026-04-22T06:02:41.560Z | bash-write | &1
-- 2026-04-22T06:02:41.886Z | bash-write | &1
-- 2026-04-22T06:02:42.633Z | bash-write | &1
-- 2026-04-22T06:02:57.966Z | bash-write | &1
-- 2026-04-22T06:02:59.185Z | bash-write | &1
-- 2026-04-22T06:03:20.895Z | bash-write | &1
-- 2026-04-22T06:03:43.395Z | bash-write | &1
-- 2026-04-22T06:03:49.374Z | bash-write | /tmp/cronq.txt
-- 2026-04-22T06:04:04.021Z | bash-write | &1
-- 2026-04-22T06:04:10.501Z | bash-write | &1
-- 2026-04-22T06:04:41.563Z | bash-write | &1
-- 2026-04-22T06:04:57.244Z | bash-write | &1
-- 2026-04-22T06:05:05.831Z | bash-write | &1;
-- 2026-04-22T06:05:20.244Z | bash-write | &1
-- 2026-04-22T06:05:31.231Z | bash-write | &1
-- 2026-04-22T06:05:46.060Z | bash-write | &1
-- 2026-04-22T06:05:59.982Z | bash-write | &1
-- 2026-04-22T06:06:11.710Z | bash-write | &1
-- 2026-04-22T06:06:30.163Z | bash-write | &1
-- 2026-04-22T06:06:49.260Z | bash-write | &1
-- 2026-04-22T06:06:55.486Z | bash-write | /tmp/nyxulta.txt
-- 2026-04-22T06:07:08.032Z | bash-write | &1
-- 2026-04-22T06:07:15.680Z | bash-write | &1
-- 2026-04-22T06:07:15.714Z | bash-write | /tmp/rtq.txt
-- 2026-04-22T06:07:47.681Z | bash-write | &1
-- 2026-04-22T06:07:56.165Z | bash-write | /tmp/parentopps.txt
-- 2026-04-22T06:08:10.324Z | bash-write | &1
-- 2026-04-22T06:08:15.302Z | bash-write | &1
-- 2026-04-22T06:08:27.523Z | bash-write | &1
-- 2026-04-22T06:08:44.602Z | bash-write | &1
-- 2026-04-22T06:08:45.694Z | bash-write | &1
-- 2026-04-22T06:09:02.796Z | bash-write | &1
 - 2026-04-22T06:09:17.757Z | bash-write | &1
 - 2026-04-22T06:09:31.489Z | bash-write | &1
 
@@ -179,3 +130,30 @@
 - 2026-04-22T20:39:15.615Z | write | C:\Users\JakeMismas\claude-skills\docs\AUTHORING.md
 - 2026-04-22T20:39:20.833Z | write | C:\Users\JakeMismas\claude-skills\docs\AUTHORING.md
 - 2026-04-22T20:39:26.416Z | write | C:\Users\JakeMismas\claude-skills\docs\CLAUDE_AI_UPLOAD.md
+- 2026-04-22T20:40:22.620Z | bash-write | &1
+- 2026-04-22T20:40:37.514Z | bash-write | |
+- 2026-04-22T20:42:55.930Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-dev-docs\SKILL.md
+- 2026-04-22T20:43:01.757Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-dev-docs-update\SKILL.md
+- 2026-04-22T20:43:07.956Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-install\SKILL.md
+- 2026-04-22T20:43:13.391Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-setup\SKILL.md
+- 2026-04-22T20:43:19.541Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-strategic-plan-architect\SKILL.md
+- 2026-04-22T20:43:25.690Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-test-class-generator\SKILL.md
+- 2026-04-22T20:43:33.367Z | write | C:\Users\JakeMismas\claude-skills\sync.sh
+- 2026-04-22T20:43:41.454Z | write | C:\Users\JakeMismas\claude-skills\global-CLAUDE.md
+- 2026-04-22T20:44:00.252Z | write | C:\Users\JakeMismas\.claude\CLAUDE.md
+- 2026-04-22T20:44:11.107Z | write | C:\Users\JakeMismas\claude-skills\hooks\pre-tool-use.js
+- 2026-04-22T20:44:25.058Z | write | C:\Users\JakeMismas\claude-skills\CLAUDE.md
+- 2026-04-22T20:44:40.068Z | write | C:\Users\JakeMismas\claude-skills\docs\CHANGELOG.md
+- 2026-04-22T20:45:48.199Z | bash-write | &1
+- 2026-04-22T20:46:13.530Z | write | C:\Users\JakeMismas\claude-skills\skills\general\brainstorming\SKILL.md
+- 2026-04-22T20:46:20.593Z | write | C:\Users\JakeMismas\claude-skills\skills\general\deep-research\SKILL.md
+- 2026-04-22T20:46:29.281Z | write | C:\Users\JakeMismas\claude-skills\skills\general\plan-writing\SKILL.md
+- 2026-04-22T20:46:35.459Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-dev-docs\SKILL.md
+
+- 2026-04-22T20:46:40.107Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-dev-docs-update\SKILL.md
+- 2026-04-22T20:46:44.464Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-install\SKILL.md
+- 2026-04-22T20:46:49.087Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-setup\SKILL.md
+- 2026-04-22T20:46:53.875Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-strategic-plan-architect\SKILL.md
+- 2026-04-22T20:46:59.158Z | write | C:\Users\JakeMismas\claude-skills\skills\salesforce\sf-test-class-generator\SKILL.md
+- 2026-04-22T20:47:44.607Z | bash-write | &1
+- 2026-04-22T20:48:03.550Z | bash-write | /dev/null

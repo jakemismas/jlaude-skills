@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-04-22: Skills Restructure
+
+### Changed
+- Flattened `skills/custom`, `skills/public`, `skills/vendor` in favor of two grouping folders: `skills/salesforce/` and `skills/general/`.
+- Standardized Salesforce skill prefix to `sf-`: `salesforce-flow` -> `sf-flow`, `apex-patterns` -> `sf-apex-patterns`, `lwc-patterns` -> `sf-lwc-patterns`. Existing `sf-integration` and `sf-test-data` unchanged.
+- Dropped the `ag-` prefix on the three community skills kept: `brainstorming`, `deep-research`, `plan-writing`.
+- Converted six vendor SF reference files to proper SKILL.md format: `sf-dev-docs`, `sf-dev-docs-update`, `sf-install`, `sf-setup`, `sf-strategic-plan-architect`, `sf-test-class-generator`.
+- `sync.sh` now walks `skills/*/` and recurses one level into grouping folders, and prunes `~/.claude/{skills,agents,commands}` before re-populating to remove orphaned entries.
+- `pre-tool-use.js` rm pattern now excludes `git`, `npm`, `yarn`, `pnpm`, `bun`, `brew`, `apt`, `apt-get`, `dnf`, `docker`, `kubectl`, `helm` so package-manager `rm` subcommands are not blocked.
+- Marked `~/.claude/CLAUDE.md` as sync-only; edit `global-CLAUDE.md` as source of truth.
+
+### Removed
+- 253 unused vendor community skills.
+- `sf-claude-framework` (content superseded by the six extracted SKILL.md files).
+
 ## 2026-03-12: Initial Release
 
 ### Added
