@@ -2,30 +2,39 @@
 
 ## Skill Loading Philosophy
 
-Scan descriptions first, load the relevant SKILL.md before acting. Load multiple skills simultaneously when the task spans multiple domains (e.g., building an LWC that calls Apex: load both lwc-patterns and apex-patterns). Never improvise when a skill exists for the domain.
+Scan descriptions first, load the relevant SKILL.md before acting. Load multiple skills simultaneously when the task spans multiple domains (e.g., building an LWC that calls Apex: load both sf-lwc-patterns and sf-apex-patterns). Never improvise when a skill exists for the domain.
 
 ## Skills Index
 
-### Custom Skills (skills/custom/)
+### Salesforce Skills (skills/salesforce/)
 
 | Skill | Description |
 |-------|-------------|
-| salesforce-flow | Flow Builder patterns, best practices, debugging, bulkification, governor limits, connector validation, API 62.0, type-specific patterns |
-| apex-patterns | Apex best practices, trigger handler pattern, governor limits, async patterns, test coverage standards |
-| lwc-patterns | LWC development patterns, anti-patterns, wire adapters, accessibility, ESLint config |
+| sf-flow | Flow Builder patterns, best practices, debugging, bulkification, governor limits, connector validation, API 62.0, type-specific patterns |
+| sf-apex-patterns | Apex best practices, trigger handler pattern, governor limits, async patterns, test coverage standards |
+| sf-lwc-patterns | LWC development patterns, anti-patterns, wire adapters, accessibility, ESLint config |
 | sf-integration | Salesforce integration patterns: REST, Named Credentials, External Services, Platform Events, CDC |
 | sf-test-data | Generating realistic test/proxy data in Salesforce using Anonymous Apex. Schema discovery, lookup resolution, fill rate variation, governor limits |
+| sf-claude-framework | Community Claude framework for Salesforce dev workflows |
+| sf-dev-docs | Salesforce developer reference documentation |
+| sf-dev-docs-update | Update routines for Salesforce developer reference documentation |
+| sf-install | Salesforce environment install guidance |
+| sf-setup | Salesforce environment setup guidance |
+| sf-strategic-plan-architect | Strategic planning for Salesforce architecture work |
+| sf-test-class-generator | Patterns for generating Apex test classes |
+
+### General Skills (skills/)
+
+| Skill | Description |
+|-------|-------------|
 | doc-strategy | Technical documentation and proposal writing strategy for Salesforce consulting |
 | sow-generator | SOW authoring for Salesforce consulting. PENDING Canidium template context |
 | canidium-discovery | Client discovery process, question frameworks, scope definition. PENDING Canidium frameworks |
 | pre-sales | Solution architecture for pre-sales, discovery-to-proposal workflow. PENDING Canidium voice context |
 | prd-authoring | AI-optimized PRD writing for Claude Desktop → Claude Code workflow. Template, phasing, boundaries, acceptance criteria |
-
-### Public Skills (skills/public/)
-(Empty: populate from anthropics/skills or Anthropic official releases)
-
-### Vendor Skills (skills/vendor/)
-(Populated from community repos. See each SKILL.md for source attribution.)
+| ag-brainstorming | Transforms vague ideas into validated designs through disciplined reasoning. Use before creative or constructive work |
+| ag-deep-research | Structured deep-research methodology for complex topics |
+| ag-plan-writing | Planning discipline for non-trivial implementation tasks |
 
 ## Agents Index
 

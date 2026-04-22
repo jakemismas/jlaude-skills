@@ -1,6 +1,6 @@
 ---
 name: lwc-build
-description: Builds a Lightning Web Component from requirements. Invokes the sf-lwc-builder agent after gathering context and loading the lwc-patterns skill. Use this command whenever a user wants to create or build an LWC.
+description: Builds a Lightning Web Component from requirements. Invokes the sf-lwc-builder agent after gathering context and loading the sf-lwc-patterns skill. Use this command whenever a user wants to create or build an LWC.
 ---
 
 # /lwc-build
@@ -15,7 +15,7 @@ Build a Lightning Web Component interactively.
    - Functional requirements
    - Any existing components to reference
 
-2. Load the `lwc-patterns` skill before handing off to the agent.
+2. Load the `sf-lwc-patterns` skill before handing off to the agent.
 
 ## Execution
 

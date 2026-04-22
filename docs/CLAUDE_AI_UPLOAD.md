@@ -12,16 +12,16 @@ Manual checklist for uploading custom skills to Claude.ai projects. Claude.ai ha
 ## Skills to Upload (Priority Order)
 
 ### High Priority (upload first)
-- [ ] skills/custom/salesforce-flow/SKILL.md
-- [ ] skills/custom/apex-patterns/SKILL.md
-- [ ] skills/custom/lwc-patterns/SKILL.md
-- [ ] skills/custom/sf-integration/SKILL.md
+- [ ] skills/salesforce/sf-flow/SKILL.md
+- [ ] skills/salesforce/sf-apex-patterns/SKILL.md
+- [ ] skills/salesforce/sf-lwc-patterns/SKILL.md
+- [ ] skills/salesforce/sf-integration/SKILL.md
 
 ### Medium Priority
-- [ ] skills/custom/doc-strategy/SKILL.md
-- [ ] skills/custom/sow-generator/SKILL.md
-- [ ] skills/custom/canidium-discovery/SKILL.md
-- [ ] skills/custom/pre-sales/SKILL.md
+- [ ] skills/doc-strategy/SKILL.md
+- [ ] skills/sow-generator/SKILL.md
+- [ ] skills/canidium-discovery/SKILL.md
+- [ ] skills/pre-sales/SKILL.md
 
 ### Agent Descriptions (trimmed for Claude.ai)
 - [ ] agents/sf-flow-builder.md (trim to instructions only, remove YAML frontmatter)
@@ -32,10 +32,10 @@ Manual checklist for uploading custom skills to Claude.ai projects. Claude.ai ha
 
 ## Skills That May Need Trimming
 
-The following skills may exceed Claude.ai's per-file context budget. If upload fails or a truncation warning appears, create a trimmed version in skills/custom/[name]/SKILL-trimmed.md:
+The following skills may exceed Claude.ai's per-file context budget. If upload fails or a truncation warning appears, create a trimmed version in skills/[group]/[name]/SKILL-trimmed.md:
 
-- salesforce-flow (large, has extensive examples)
-- apex-patterns (large, has code examples)
+- sf-flow (large, has extensive examples)
+- sf-apex-patterns (large, has code examples)
 - Any vendor skills over 5,000 words
 
 ## Trimming Guidelines

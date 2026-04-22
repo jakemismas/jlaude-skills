@@ -24,6 +24,4 @@ Sync the skills repository and re-register everything.
 
 3. Report updated counts and any differences.
 
-4. Report if any new vendor skills were added (by comparing before/after counts in skills/vendor/).
-
-5. Report the security scan result from sync.sh output.
+4. Report the security scan result from sync.sh output.

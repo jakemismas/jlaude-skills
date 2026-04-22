@@ -1,6 +1,6 @@
 ---
 name: flow-build
-description: Builds a Salesforce Flow from requirements. Invokes the sf-flow-builder agent after gathering context and loading the salesforce-flow skill. Use this command whenever a user says they want to build, create, or generate a Flow.
+description: Builds a Salesforce Flow from requirements. Invokes the sf-flow-builder agent after gathering context and loading the sf-flow skill. Use this command whenever a user says they want to build, create, or generate a Flow.
 ---
 
 # /flow-build
@@ -14,7 +14,7 @@ Build a Salesforce Flow interactively.
    - Which org/sandbox should I pull metadata from? (org alias)
    - Is there an existing flow to reference or extend?
 
-2. Load the `salesforce-flow` skill before handing off to the agent.
+2. Load the `sf-flow` skill before handing off to the agent.
 
 3. Verify the target org alias is a sandbox, not production.
 

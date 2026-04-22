@@ -25,7 +25,6 @@ fi
 
 # Count before
 SKILLS_BEFORE=$(find "$SKILLS_DIR/skills" -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
-VENDOR_BEFORE=$(find "$SKILLS_DIR/skills/vendor" -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
 
 # Re-create target directories
 mkdir -p "$CLAUDE_DIR/skills" "$CLAUDE_DIR/agents" "$CLAUDE_DIR/commands"
@@ -57,11 +56,21 @@ link_or_copy() {
   fi
 }
 
-# Sync skills
-for dir in "$SKILLS_DIR/skills/public"/* "$SKILLS_DIR/skills/custom"/* "$SKILLS_DIR/skills/vendor"/*; do
+# Sync skills: walk skills/ top level. If a dir has SKILL.md, it's a skill.
+# Otherwise treat it as a grouping folder (e.g., salesforce/) and recurse one level.
+for dir in "$SKILLS_DIR/skills"/*/; do
   if [ -d "$dir" ]; then
     name=$(basename "$dir")
-    link_or_copy "$dir" "$CLAUDE_DIR/skills/$name"
+    if [ -f "$dir/SKILL.md" ]; then
+      link_or_copy "${dir%/}" "$CLAUDE_DIR/skills/$name"
+    else
+      for subdir in "$dir"*/; do
+        if [ -d "$subdir" ]; then
+          subname=$(basename "$subdir")
+          link_or_copy "${subdir%/}" "$CLAUDE_DIR/skills/$subname"
+        fi
+      done
+    fi
   fi
 done
 
@@ -84,7 +93,6 @@ SKILLS_AFTER=$(find "$SKILLS_DIR/skills" -name "SKILL.md" 2>/dev/null | wc -l | 
 AGENTS=$(find "$SKILLS_DIR/agents" -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
 COMMANDS=$(find "$SKILLS_DIR/commands" -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
 INSTINCTS=$(find "$SKILLS_DIR/instincts" -name "*.md" 2>/dev/null | wc -l | tr -d ' ')
-VENDOR_AFTER=$(find "$SKILLS_DIR/skills/vendor" -name "SKILL.md" 2>/dev/null | wc -l | tr -d ' ')
 
 echo ""
 echo "=== Counts ==="
@@ -92,11 +100,6 @@ echo "Skills:    $SKILLS_AFTER (was $SKILLS_BEFORE)"
 echo "Agents:    $AGENTS"
 echo "Commands:  $COMMANDS"
 echo "Instincts: $INSTINCTS"
-
-if [ "$VENDOR_AFTER" -gt "$VENDOR_BEFORE" ] 2>/dev/null; then
-  NEW_VENDOR=$((VENDOR_AFTER - VENDOR_BEFORE))
-  echo "New vendor skills: $NEW_VENDOR"
-fi
 
 # Security scan (if available)
 echo ""

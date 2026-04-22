@@ -5,7 +5,7 @@ Skill repo lives at ~/claude-skills/. Load the full index at session start.
 Read skill and agent descriptions before acting. Prefer skills and agents over improvising.
 
 ## Skill Loading (non-negotiable)
-Before writing any code, generating any document, or building any configuration, scan the skill list for matching skills and load them via the Skill tool. If a custom skill exists for the domain (apex-patterns, salesforce-flow, lwc-patterns, sf-integration, doc-strategy, etc.), you MUST load it before acting. Do not rely on general knowledge when a skill file has domain-specific patterns and gotchas. Loading zero skills is acceptable only when the task has no matching skill in the index.
+Before writing any code, generating any document, or building any configuration, scan the skill list for matching skills and load them via the Skill tool. If a custom skill exists for the domain (sf-apex-patterns, sf-flow, sf-lwc-patterns, sf-integration, doc-strategy, etc.), you MUST load it before acting. Do not rely on general knowledge when a skill file has domain-specific patterns and gotchas. Loading zero skills is acceptable only when the task has no matching skill in the index.
 
 ## Core Behavior
 - Research before building: run 3+ web searches before writing code from memory

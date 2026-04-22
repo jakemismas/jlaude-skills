@@ -44,7 +44,7 @@ If the answer is not a clear yes, skip it. Most sessions produce 0-3 captures. A
 
 4. **Present to Jake.** Before writing anything, show a numbered list:
    ```
-   1. [REFINEMENT] apex-patterns: Mixed DML workaround using System.runAs -- 3 lines
+   1. [REFINEMENT] sf-apex-patterns: Mixed DML workaround using System.runAs -- 3 lines
    2. [REJECT] General SOQL best practice -- already documented
    3. [REJECT] Client field name mapping -- too specific
    ```
@@ -76,10 +76,10 @@ Skip the candidate if ANY of these apply:
 
 ## Examples of good captures
 
-- "When deploying flows, do NOT pass --target-org to sf project deploy resume" (gotcha -> salesforce-flow)
+- "When deploying flows, do NOT pass --target-org to sf project deploy resume" (gotcha -> sf-flow)
 - "Anonymous Apex has a compilation size limit; split scripts by parent record" (workaround -> sf-test-data)
 - "On Windows, ln -sf silently fails in Git Bash; use cp -r with rm -rf cleanup instead" (workaround -> new candidate)
-- "Mixed DML: update User outside System.runAs, non-setup DML inside" (gotcha -> apex-patterns)
+- "Mixed DML: update User outside System.runAs, non-setup DML inside" (gotcha -> sf-apex-patterns)
 
 ## Examples of bad captures (reject these)
 
@@ -87,7 +87,7 @@ Skip the candidate if ANY of these apply:
 - "Always validate before deploying" (already in CLAUDE.md and sf-sandbox-first instinct)
 - "Use async Apex for long-running operations" (general knowledge, first page of docs)
 - "Client X uses a custom field called Revenue_Bucket__c" (client-specific)
-- "We ran /upskill and updated apex-patterns" (self-referential noise)
+- "We ran /upskill and updated sf-apex-patterns" (self-referential noise)
 - "Consider using Named Credentials for callouts" (advice, not a concrete technique)
 
 ## Maintenance

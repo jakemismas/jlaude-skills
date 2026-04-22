@@ -4,7 +4,7 @@ How to add new skills, agents, commands, and instincts to this repository.
 
 ## Adding a New Skill
 
-1. Create a directory: `skills/custom/[skill-name]/`
+1. Create a directory: `skills/[skill-name]/` (or `skills/salesforce/[skill-name]/` for SF-specific skills).
 2. Create `SKILL.md` with this format:
 
 ```yaml
@@ -73,12 +73,12 @@ evidence_count: N
 3. Update the repo index CLAUDE.md.
 4. Instincts can also be promoted from candidates using `/instinct-learn`.
 
-## Vendor Skills
+## Third-Party Skills
 
-Vendor skills go in `skills/vendor/[skill-name]/SKILL.md`. Always:
+When importing a community or vendor skill, place it alongside first-party skills (e.g., `skills/[name]/` or `skills/salesforce/[name]/`). Always:
 - Preserve the original content exactly
 - Prepend `<!-- source: [repo-url] -->` as the first line
-- Never modify vendor skill content
+- Never modify third-party skill content
 
 ## Quality Checklist
 
