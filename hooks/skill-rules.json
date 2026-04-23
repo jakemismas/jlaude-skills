@@ -60,6 +60,9 @@
     },
     "user-story-writing": {
       "keywords": ["user story", "user stories", "backlog item", "jira ticket", "acceptance criteria", "story format", "write a story", "draft a story", "as a user i want", "split this story"]
+    },
+    "canidium-estimation-loe": {
+      "keywords": ["level of effort", "loe worksheet", "loe estimate", "fill out the loe", "estimation worksheet", "estimate this change", "estimate this requirement", "change request estimate", "size this requirement", "how long will this take"]
     }
   }
 }

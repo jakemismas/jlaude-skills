@@ -35,6 +35,7 @@ Scan descriptions first, load the relevant SKILL.md before acting. Load multiple
 | plan-writing | Planning discipline for non-trivial implementation tasks |
 | skill-authoring | Writing new skills, tuning descriptions for reliable triggering, placing skills in the right folder, and integrating with the hook-based auto-loader |
 | user-story-writing | User story authoring for Canidium engagements. As-a / I-want / So-that format, behavioral acceptance criteria, sizing, and common failure modes |
+| canidium-estimation-loe | Fills LOE worksheets for change requests and requirements. Plan/Configure/Test/Deploy hours with low-high ranges plus a confidence note for the PM |
 
 ## Agents Index
 
